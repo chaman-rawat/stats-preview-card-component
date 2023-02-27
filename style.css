@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Primary Colors */
+  --clr-very-dark-blue: hsl(233, 47%, 7%);
+  --clr-dark-desaturated-blue: hsl(244, 38%, 16%);
+  --clr-soft-violet: hsl(277, 64%, 61%);
+
+  /* Neutral */
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-white-paragraph: hsla(0, 0%, 100%, 0.75);
+  --clr-white-stats: hsla(0, 0%, 100%, 0.6);
+
+  font-size: 10px;
+}
+
+body {
+  background-color: var(--clr-very-dark-blue);
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--clr-white-paragraph);
+  font-family: "Lexend Deca", sans-serif;
+  text-align: center;
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 325px;
+  overflow: hidden;
+  background-color: var(--clr-dark-desaturated-blue);
+  border-radius: 10px;
+  margin-top: 9rem;
+}
+
+.image-container {
+  display: flex;
+  background-color: var(--clr-soft-violet);
+}
+
+img {
+  max-width: 100%;
+  mix-blend-mode: multiply;
+  opacity: 0.75;
+}
+
+.card-details {
+  padding: 3.5rem 3rem;
+}
+
+.card-title {
+  margin: 0;
+  color: var(--clr-white);
+  font-size: 2.75rem;
+  font-family: "Inter", sans-serif;
+}
+
+.accent-text {
+  color: var(--clr-soft-violet);
+}
+
+.card-body {
+  line-height: 1.7;
+  margin-bottom: 3.5rem;
+}
+
+.card-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  line-height: 1.6;
+  text-transform: uppercase;
+  color: var(--clr-white-stats);
+}
+
+.card-stats-value {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  font-family: "Inter", sans-serif;
+  color: var(--clr-white);
+}
+
+@media (min-width: 1200px) {
+  body {
+    text-align: unset;
+  }
+
+  .card {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    max-width: 1110px;
+    margin-top: 17.5rem;
+  }
+
+  .card-details {
+    width: 50%;
+    padding: 7rem 10rem 0 7rem;
+    line-height: 1.3;
+    letter-spacing: 0.65px;
+  }
+
+  .card-title {
+    font-size: 3.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .card-body {
+    letter-spacing: -0.1px;
+    margin-bottom: 6.7rem;
+  }
+
+  .card-stats {
+    flex-direction: row;
+    gap: 6rem;
+    letter-spacing: -0.6px;
+  }
+
+  .card-stats-value {
+    letter-spacing: 2px;
+  }
+}
